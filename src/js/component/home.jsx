@@ -25,10 +25,11 @@ const Home = () => {
    					 <li className="list-group-item ">
 						{todos.map((t)=> (
 							<li>
-								{t}
+								{t} <button type="button" className="btn btn-outline-danger"><i className="fa-solid fa-x"></i></button>
 							</li>
 						))}
 					 </li>
+				
  				</ul>
   				<div className="card-footer">
    					23 Tasks

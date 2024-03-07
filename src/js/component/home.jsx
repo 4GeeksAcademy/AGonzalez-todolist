@@ -9,8 +9,8 @@ const Home = () => {
 		<>
 		<div className="container">
 			<h1>My Todos</h1>
-			<div className="card">
-  				<ul className="list-group">
+			<div className="card ">
+  				<ul className="list-group list-group-flush">
     				<li className="list-group-item">
 						<input type="text" 
 							onChange={(e)=> setInputValue(e.target.value)}
@@ -21,18 +21,27 @@ const Home = () => {
 									setInputValue("")
 								}
 							}}
-							placeholder="Add tasks ..."></input></li>
-   					 <li className="list-group-item ">
-						{todos.map((t)=> (
+							placeholder="Add tasks ..."></input>
+					</li>
+   					 <li className="list-group-item">
+						{todos.map((item, index)=> (
 							<li>
-								{t} <button type="button" className="btn btn-outline-danger"><i className="fa-solid fa-x"></i></button>
+								{item} <button type="button" 
+								className="btn " 
+								onClick={() => 
+								setTodos(
+									todos.filter(
+										(t, currentIndex) => 
+										index != currentIndex))}>
+											<i className="fa-solid fa-x"></i>
+										</button>
 							</li>
 						))}
 					 </li>
 				
  				</ul>
-  				<div className="card-footer">
-   					23 Tasks
+  				<div className="card-footer text-secondary">
+   					{todos.length} tasks
  				</div>
 			</div>
 		</div>

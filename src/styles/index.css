@@ -3,6 +3,8 @@ body{
 }
 h1{
     text-align: center;
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
 }
 input{
     border: none;
@@ -10,4 +12,14 @@ input{
 }
 ul li{
     list-style: none;
+    margin-bottom: 6px;
+    border-bottom: dotted gray 1px;
+    padding-bottom: 15px;
 }
+
+
+.btn{
+    float: right;
+    color: red;
+}
+
